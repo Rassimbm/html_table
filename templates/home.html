@@ -15,23 +15,15 @@
             </tr>
         </thead>
         <tbody>
+            {% for user in table_users%}
             <tr>
-                <td>Michael</td>
-                <td>Choi</td>
-                <td>Michael Choi</td>
+                <td>{{user["first_name"]}}</td>
+                <td>{{user["last_name"]}}</td>
+                <td>{{user["first_name"] +" "+ user["last_name"]}}</td>
             </tr>
-            <tr>
-                <td>John</td>
-                <td>Supsupin</td>
-                <td>John Supsupin</td>
-            </tr>
-            <tr>
-                <td>Mark</td>
-                <td>Guillen</td>
-                <td>Mark Guillen</td>
-            </tr>
-            </tbody>
-        </table>
+            {% endfor %}
+        </tbody>
+    </table>
         
 </body>
 </html>
